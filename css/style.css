@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Comfortaa:wght@300&family=Fredoka:wght@500&family=Quicksand:wght@400;500;600;700&family=Roboto+Mono:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
   --header-height: 3.5rem;
@@ -463,19 +462,25 @@ li {
 }
 
 /* Projects */
-
+/* General Projects Styles */
 .projects {
   background-color: var(--container-color);
   transition: background-color 0.4s;
+  padding: 2rem 0; /* Added padding for top and bottom */
 }
 
 .projects__container {
-  row-gap: 2rem;
+  display: grid; /* Use grid layout for better responsiveness */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem; /* Gap between items */
 }
 
+/* Card Styles */
 .projects__card {
-  padding: 1rem 1rem 2rem;
+  padding: 1rem;
   transition: background-color 0.4s;
+  border-radius: 8px; /* Added border-radius for rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
 }
 
 .projects__image {
@@ -483,16 +488,24 @@ li {
   margin: 0.75rem;
   justify-content: center;
 }
-.ubp {
-  color: var(--first-color);
-}
+
+/* Button Styles */
 .projects__button {
   position: absolute;
   right: 1rem;
   bottom: -1.5rem;
   padding: 1rem;
+  background-color: var(--first-color); /* Optional button background */
+  color: #fff; /* Ensure button text is visible */
+  border-radius: 50%; /* Make button circular */
+  transition: background 0.3s; /* Smooth hover transition */
 }
 
+.projects__button:hover {
+  background-color: var(--hover-color); /* Define a hover color */
+}
+
+/* Content Styles */
 .projects__content {
   margin-bottom: 1.25rem;
 }
@@ -518,11 +531,13 @@ li {
   left: 0;
 }
 
+/* Title Styles */
 .projects__title {
   font-size: var(--h3-font-size);
   margin-bottom: 0.75rem;
 }
 
+/* Button Link Styles */
 .projects__buttons {
   display: flex;
   align-items: center;
@@ -550,9 +565,11 @@ li {
   color: var(--first-color);
 }
 
+/* Hover Effect for Card */
 .projects__card:hover {
   background-color: var(--white-color);
 }
+
 /* Foooooooter */
 .footer {
   background-color: var(--black-color);
@@ -635,20 +652,64 @@ li {
   .home__image {
     width: 180px;
   }
+
+  .about__image {
+    width: 180px;
+  }
+
+  .about__shadow {
+    height: 330px;
+    right: -2.5rem;
+  }
+  .projects__subtitle {
+    font-size: calc(var(--small-font-size) * 0.7);
+  }
+
+  .projects__title {
+    font-size: calc(var(--h3-font-size) * 0.7);
+  }
+
+  .projects__button {
+    padding: 0.5rem; /* Adjust button padding */
+  }
 }
 
 @media screen and (min-width: 580px) {
   .home__container,
-  .about__container,
   .projects__container {
     grid-template-columns: 350px;
     justify-content: center;
   }
+  .projects__subtitle {
+    font-size: calc(var(--small-font-size) * 0.85);
+  }
+
+  .projects__title {
+    font-size: calc(var(--h3-font-size) * 0.85);
+  }
+
+  .projects__button {
+    padding: 0.75rem; /* Adjust button padding */
+  }
 }
 
 @media screen and (min-width: 770px) {
+  .services__container {
+    grid-template-columns: repeat(2, 250px);
+  }
   .projects__container {
     grid-template-columns: repeat(2, 350px);
+  }
+  .projects__subtitle {
+    font-size: var(--small-font-size);
+  }
+
+  .projects__title {
+    font-size: var(--h3-font-size);
+  }
+
+  .projects__button {
+    padding: 1rem; /* Standard button padding */
   }
 }
 
@@ -711,7 +772,6 @@ li {
   .nav__link-button::after {
     background-color: transparent;
   }
-
   .home__container {
     grid-template-columns: repeat(2, 460px);
     gap: 2rem 4rem;
@@ -786,37 +846,39 @@ li {
     font-size: 1.5rem;
     padding: 0.5rem;
   }
-}
-.projects__container {
-  grid-template-columns: repeat(3, 352px);
-  padding-block: 3rem 1rem;
-}
-.projects__card {
-  padding: 1.25rem 1.25rem 2.5rem;
-}
-.projects__image {
-  margin-bottom: 1rem;
-  display: block;
-  margin: 0 auto; /* Menempatkan gambar di tengah secara horizontal */
-  width: 250px; /* Ukuran gambar */
-  height: auto;
-}
-.projects__content {
-  margin-bottom: 2rem;
-}
-.projects__button {
-  right: 1.25rem;
-}
+  .button__ghost {
+    padding: 0.75rem;
+  }
+  .button__ghost i {
+    font-size: 1.5rem;
+  }
+  .projects__container {
+    grid-template-columns: repeat(3, 352px);
+    padding-block: 3rem 1rem;
+  }
+  .projects__card {
+    padding: 1.25rem 1.25rem 2.5rem;
+  }
+  .projects__image {
+    margin-bottom: 1rem;
+  }
+  .projects__content {
+    margin-bottom: 2rem;
+  }
+  .projects__button {
+    right: 1.25rem;
+  }
 
-.footer__container {
-  padding-block: 4rem;
-  grid-template-columns: repeat(2, max-content);
-  justify-content: space-between;
-}
-.footer__links {
-  column-gap: 3rem;
-  order: 1;
-}
-.scrollup {
-  right: 3rem;
+  .footer__container {
+    padding-block: 4rem;
+    grid-template-columns: repeat(2, max-content);
+    justify-content: space-between;
+  }
+  .footer__links {
+    column-gap: 3rem;
+    order: 1;
+  }
+  .scrollup {
+    right: 3rem;
+  }
 }
