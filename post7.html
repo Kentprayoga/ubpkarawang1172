@@ -22,16 +22,126 @@
         <article>
           <div class="gambar">
             <h2>post 7</h2>
-            <img src="img/hope.jpg" alt="image" class="article-image" />
+            <img src="img/Post7.jpg" alt="image" class="article-image" />
           </div>
           <div class="projects__content">
-            <h3 class="projects__subtitle">Basis Data</h3>
+            <h3 class="projects__subtitle">Jenis Jenis kunci Yang ada di DataBase</h3>
           </div>
-          <p style="text-indent: 0px">-28 September 2024</p>
-          <h2 class="projects__title">Harapan dalam Matakuliah ini</h2>
+          <p style="text-indent: 0px">-12 oktober 2024</p>
+
+          <h2 class="projects__title">Primary Key</h2>
           <p class="projects__description">
-            Harapan saya dalam matakuliah ini semoga saya dapat menguasai konsep konsep dasar seperti normalisai erd dan sql. mampu menerapkannya dalam projek dan lulus di matakuliah ini dengan nilai yang bagus
+            Kunci Utama adalah sekumpulan atribut yang dapat mengidentifikasi suatu tabel secara unik. Satu tabel hanya dapat memiliki satu kunci utama. Dari semua kunci kandidat yang dipilih, salah satu kunci dipilih sebagai kunci utama.
           </p>
+          <h2>Peran dan Pentingnya Primary Key</h2>
+          <ol>
+            <li>Unik dan Mengidentifikasi</li>
+            <p>Primary Key memberikan cara yang unik untuk mengidentifikasi setiap entitas atau rekaman dalam tabel. Dengan demikian, tidak akan ada ambiguitas atau duplikasi dalam pengidentifikasian data.</p>
+            <li>Integritas Data</li>
+            <p>Primary Key membantu menjaga integritas data dengan mencegah duplikasi atau nilai yang kosong. Ini memastikan bahwa setiap entitas memiliki identifikasi yang jelas dan tidak ada konflik data yang mungkin terjadi.</p>
+            <li>Hubungan Antar Tabel</li>
+            <p>Primary Key sering digunakan sebagai referensi dalam pembentukan hubungan antar tabel. Melalui Foreign Key (kunci asing), kita dapat menghubungkan data antar tabel dan membuat relasi yang konsisten.</p>
+          </ol>
+          <h2>contoh pada penerapan ERD</h2>
+          <ul>
+            <li>Tabel “Mahasiswa”;<br />Primary Key: ID_Mahasiswa;</li>
+            <li>Tabel “Barang”; <br />Primary Key: Kode_Barang;</li>
+            <li>Tabel “Pegawai”;<br />Primary Key: "NIP";</li>
+            <li>Tabel 'Transaksi';<br />Primary Key: ID_Transaksi;</li>
+            <li>Tabel"Karyawan Proyek";<br />Primary Key: ID_KaryawanProyek</li>
+          </ul>
+          <h2 class="projects__title">Candidate Key</h2>
+          <p class="projects__description">
+            Candidate Key adalah satu atau lebih atribut dalam sebuah tabel basis data yang memiliki kemampuan untuk mengidentifikasi secara unik setiap baris atau entitas dalam tabel tersebut. Dengan kata lain, Candidate Key adalah
+            alternatif yang memungkinkan kita untuk memilih atribut mana yang dapat berperan sebagai Primary Key dalam tabel. Meskipun hanya satu Candidate Key yang akan dipilih sebagai Primary Key, atribut-atribut lainnya yang memenuhi
+            syarat juga disebut sebagai Candidate Key.
+          </p>
+          <h3>Candidate Key harus memenuhi dua syarat utama</h3>
+          <ol>
+            <ul>
+              Unik: Nilai-nilai dalam Candidate Key harus unik untuk setiap entitas dalam tabel.
+            </ul>
+            <ul>
+              Minimal: Candidate Key harus minimal, artinya tidak boleh ada subset dari Candidate Key yang dapat digunakan untuk mengidentifikasi entitas secara unik.
+            </ul>
+          </ol>
+          <h2>contoh pada penerapan ERD</h2>
+          <ol>
+            <ul>
+              Tabel “Mata Kuliah”
+            </ul>
+            <p>
+              Dalam ERD sistem akademik, tabel “Mata Kuliah” bisa memiliki dua Candidate Key, yaitu “Kode_MataKuliah” dan “Nama_MataKuliah.” Kedua atribut ini memenuhi syarat sebagai kunci unik yang dapat digunakan untuk mengidentifikasi
+              setiap mata kuliah.
+            </p>
+            <ul>
+              Tabel “Karyawan”
+            </ul>
+            <p>
+              Dalam ERD untuk manajemen sumber daya manusia, tabel “Karyawan” mungkin memiliki dua Candidate Key, yaitu “NIP (Nomor Induk Pegawai)” dan “Nomor_KTP.” Kedua atribut ini dapat digunakan untuk mengidentifikasi setiap karyawan
+              secara unik.
+            </p>
+            <ul>
+              Tabel “Buku”
+            </ul>
+            <p>Dalam basis data perpustakaan, tabel “Buku” bisa memiliki tiga Candidate Key, yaitu “Kode_Buku,” “Nomor_ISBN,” dan “Judul_Buku.” Semua tiga atribut ini dapat digunakan untuk mengidentifikasi setiap buku secara unik.</p>
+            <ul>
+              Tabel “Produk”
+            </ul>
+            <p>Dalam ERD toko online, tabel “Produk” mungkin memiliki dua Candidate Key, yaitu “Kode_Produk” dan “Nama_Produk.” Kedua atribut ini dapat digunakan untuk mengidentifikasi setiap produk dengan cara yang unik.</p>
+            <ul>
+              Tabel “Pesawat”
+            </ul>
+            <p>
+              Dalam ERD sistem penerbangan, tabel “Pesawat” bisa memiliki dua Candidate Key, yaitu “Nomor_Seri_Pesawat” dan “Nama_Pesawat.” Kedua atribut ini memenuhi syarat sebagai kunci unik yang dapat digunakan untuk mengidentifikasi
+              setiap pesawat.
+            </p>
+          </ol>
+          <h3>Contoh penerapan Pda ERD</h3>
+          <h2 class="projects__title">Foreign Key</h2>
+          <p class="projects__description">
+            Foreign Key adalah atribut dalam sebuah tabel basis data yang digunakan untuk menghubungkan tabel tersebut dengan tabel lainnya. Foreign Key adalah referensi ke Primary Key dari tabel lain dan menciptakan hubungan antar tabel.
+            Dengan kata lain, Foreign Key menghubungkan data dalam tabel saat satu atau lebih atribut dalam tabel tersebut merujuk ke Primary Key dalam tabel lain.
+          </p>
+          <p>
+            Foreign Key digunakan untuk menjalankan operasi penggabungan (JOIN) antar tabel, yang memungkinkan kita untuk mengaitkan data dari tabel yang berbeda. Ini adalah konsep penting dalam desain basis data, karena memungkinkan kita
+            untuk menggabungkan informasi dari berbagai tabel dalam cara yang koheren.
+          </p>
+          <ol>
+            <li>Hubungan antara Tabel “Pesanan” dan “Pelanggan”</li>
+            <p>Dalam ERD sistem penjualan, tabel “Pesanan” dapat memiliki Foreign Key dalam bentuk atribut “ID_Pelanggan” yang merujuk ke Primary Key “ID_Pelanggan” dalam tabel “Pelanggan.”</p>
+            <li>Hubungan antara Tabel “Buku Pesanan” dan “Buku”</li>
+            <p>Dalam basis data e-commerce, tabel “Buku Pesanan” mungkin memiliki Foreign Key berupa atribut “Kode_Buku” yang merujuk ke Primary Key “Kode_Buku” dalam tabel “Buku.”</p>
+            <li>Hubungan antara Tabel “Transaksi” dan “Pelanggan”</li>
+            <p>Tabel “Transaksi” dalam ERD sistem perbankan dapat memiliki Foreign Key dalam bentuk atribut “ID_Pelanggan” yang merujuk ke Primary Key “ID_Pelanggan” dalam tabel “Pelanggan.”</p>
+            <li>Hubungan antara Tabel “Karyawan Proyek” dan “Karyawan”</li>
+            <p>Dalam ERD untuk manajemen proyek, tabel “Karyawan Proyek” bisa memiliki Foreign Key yang merujuk ke Primary Key “ID_Karyawan” dalam tabel “Karyawan.”</p>
+            <li>Hubungan antara Tabel “Pesawat” dan “Penerbangan”</li>
+            <p>Dalam ERD sistem penerbangan, tabel “Pesawat” dapat memiliki Foreign Key dalam bentuk atribut “ID_Penerbangan” yang merujuk ke Primary Key “ID_Penerbangan” dalam tabel “Penerbangan.</p>
+          </ol>
+          <h1>Apa itu relation pada ERD,Mengapa many-to-many tidak baik digunakan pada ERD</h1>
+          <p>
+            Dalam Entity-Relationship Diagram (ERD), hubungan (relation) menggambarkan koneksi antara entitas-entitas dalam basis data. Hubungan tersebut dapat berupa one-to-one, one-to-many, atau many-to-many, merujuk pada jumlah entitas
+            yang terlibat dalam hubungan tersebut.
+          </p>
+          <p>
+            Many-to-many (banyak-ke-banyak) adalah jenis hubungan di mana satu entitas dalam satu sisi hubungan dapat terhubung dengan banyak entitas dalam sisi lain, dan sebaliknya. Contohnya, hubungan antara entitas “Mahasiswa” dan “Mata
+            Kuliah” dalam sistem pengelolaan kelas. Satu mahasiswa bisa mendaftar untuk banyak mata kuliah, dan satu mata kuliah bisa diikuti oleh banyak mahasiswa.
+          </p>
+          <p>
+            Namun, many-to-many tidak direkomendasikan dalam ERD karena implementasinya sulit dalam basis data relasional tradisional. Database relasional biasanya tidak dapat menangani hubungan many-to-many secara langsung. Sebagai
+            gantinya, hubungan many-to-many perlu dipecah menjadi dua hubungan one-to-many dan sebuah tabel penghubung (junction table) untuk memecahkan hubungan many-to-many tersebut menjadi dua hubungan one-to-many.
+          </p>
+          <p>
+            Misalnya, untuk mengatasi many-to-many antara “Mahasiswa” dan “Mata Kuliah”, kita dapat membuat tabel “Pendaftaran” yang menghubungkan keduanya. Tabel “Pendaftaran” ini akan memiliki kolom-kolom seperti ID_Mahasiswa,
+            ID_MataKuliah, dan informasi lain yang relevan. Dengan pendekatan ini, many-to-many dipecah menjadi dua hubungan one-to-many melalui tabel “Pendaftaran”.
+          </p>
+          <p>
+            Pendekatan ini memudahkan pengelolaan data, meminimalkan redundansi, dan mengoptimalkan kinerja basis data. Oleh karena itu, dalam praktiknya, many-to-many dihindari dalam ERD untuk memudahkan pemodelan dan implementasi basis
+            data relasional.
+          </p>
+          <h1>Cara Pembuatan ERD</h1>
+          <div></div>
         </article>
         <a href="index.html" class="icon-link"><i class="fa-solid fa-backward"></i></a>
       </section>
