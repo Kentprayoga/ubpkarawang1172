@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="" />
+    <link rel="stylesheet" href="css/tugas.css" />
+    <link rel="shortcut icon" href="img/facicon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>post 4</title>
+  </head>
+  <body>
+    <main class="container">
+      <section>
+        <article>
+          <div class="gambar">
+            <h2>post 4</h2>
+            <img src="https://cdn.prod.website-files.com/6100d0111a4ed76bc1b9fd54/62db876029cb0876724c51e7_database%201.png" alt="image" class="article-image" />
+          </div>
+          <div class="projects__content">
+            <h3 class="projects__subtitle">Entity Relationship Diagram (ERD) dan Normalisasi dalam Database</h3>
+            <p style="text-indent: 0px">-28 September 2024</p>
+            <p></p>
+            <h2 class="projects__title">Definisi ERD dan Normalisasi</h2>
+            <p class="projects__description">
+              Entity Relationship Diagram (ERD) merupakan alat yang krusial dalam perancangan basis data. ERD membantu mengidentifikasi dan mendefinisikan hubungan antara berbagai entitas dalam basis data. Salah satu konsep penting yang
+              harus dipahami dalam konteks ini adalah normalisasi. Normalisasi adalah proses pengorganisasian data dalam basis data untuk mengurangi redundansi dan memastikan integritas data.
+            </p>
+
+            <p>
+              Normalisasi adalah serangkaian aturan atau tahapan yang bertujuan untuk mengeliminasi redundansi data dan memastikan data disimpan dengan cara yang efisien dan konsisten. Proses normalisasi terdiri dari beberapa bentuk normal
+              (normal forms), dari 1NF (First Normal Form) hingga 5NF (Fifth Normal Form), meskipun yang paling umum digunakan adalah hingga 3NF (Third Normal Form).
+            </p>
+
+            <h2 class="projects__title">Normalisasi dalam Database</h2>
+            <p>Ada beberapa tahapan dalam normalisasi, yaitu:</p>
+            <ul>
+              <li><strong>First Normal Form (1NF):</strong> Setiap kolom dalam tabel harus memiliki nilai atomik, artinya tidak boleh ada kolom dengan nilai yang dapat dipecah menjadi beberapa bagian.</li>
+              <li><strong>Second Normal Form (2NF):</strong> Sudah memenuhi 1NF, dan semua atribut bukan kunci utama harus bergantung sepenuhnya pada kunci utama.</li>
+              <li><strong>Third Normal Form (3NF):</strong> Sudah memenuhi 2NF, dan semua atribut bukan kunci utama harus bergantung hanya pada kunci utama, bukan pada atribut bukan kunci lainnya.</li>
+            </ul>
+
+            <h2 class="projects__title">Pentingnya Normalisasi dalam ERD</h2>
+            <p>Normalisasi dalam ERD memiliki beberapa manfaat, antara lain:</p>
+            <ul>
+              <li><strong>Mengurangi Redundansi Data:</strong> Dengan normalisasi, data yang redundan atau duplikat dapat dikurangi secara signifikan. Hal ini berarti informasi yang sama tidak perlu disimpan di lebih dari satu tempat.</li>
+              <li><strong>Memastikan Integritas Data:</strong> Normalisasi membantu menjaga integritas data dengan memastikan bahwa setiap bagian data hanya disimpan sekali, mengurangi risiko inkonsistensi data.</li>
+              <li><strong>Mempermudah Pemeliharaan Data:</strong> Dengan data yang terorganisir dengan baik, pemeliharaan data menjadi lebih mudah dan efisien.</li>
+              <li><strong>Meningkatkan Kinerja Basis Data:</strong> Basis data yang ternormalisasi cenderung memiliki kinerja yang lebih baik karena struktur tabel yang lebih sederhana dan kueri yang lebih efisien.</li>
+              <li><strong>Meningkatkan Fleksibilitas Desain Basis Data:</strong> Normalisasi memungkinkan desain basis data yang lebih fleksibel, memudahkan perubahan dan perluasan sistem.</li>
+            </ul>
+
+            <h2 class="projects__title">Implementasi Normalisasi dalam ERD</h2>
+            <p>Langkah-langkah dalam implementasi normalisasi dalam ERD antara lain:</p>
+            <ul>
+              <li><strong>Identifikasi Entitas dan Atributnya:</strong> Langkah pertama adalah mengidentifikasi semua entitas yang relevan dan atribut-atribut yang melekat pada setiap entitas.</li>
+              <li><strong>Tentukan Kunci Utama:</strong> Pilih atribut yang akan menjadi kunci utama untuk setiap entitas. Kunci utama adalah atribut yang unik untuk setiap entitas.</li>
+              <li><strong>Pecah Tabel yang Mengandung Redundansi:</strong> Jika ada tabel yang mengandung redundansi data, pecah tabel tersebut menjadi beberapa tabel yang lebih kecil sesuai dengan aturan normalisasi.</li>
+              <li><strong>Tetapkan Hubungan Antar Entitas:</strong> Gunakan ERD untuk menggambarkan hubungan antar entitas yang telah ternormalisasi.</li>
+            </ul>
+
+            <p>
+              Normalisasi dalam ERD sangat penting untuk memastikan bahwa basis data yang dirancang efisien, bebas dari redundansi, dan mudah untuk dipelihara. Dengan menerapkan normalisasi, kita dapat menciptakan basis data yang lebih
+              handal, konsisten, dan mampu mendukung kebutuhan bisnis yang dinamis. Oleh karena itu, memahami dan menerapkan normalisasi adalah keterampilan esensial bagi setiap desainer basis data.
+            </p>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/gRuPWpWBCaY?si=mH3YZPMLJEBnQ-at"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </article>
+        <a href="index.html" class="icon-link"><i class="fa-solid fa-backward"></i></a>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__container container grid">
+        <span class="footer__copy">
+          &#169; by <b>Kent Fahmi Prayoga</b>
+          <b>&#169; 2024</b>
+        </span>
+      </div>
+    </footer>
+  </body>
+</html>

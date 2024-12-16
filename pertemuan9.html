@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="" />
+    <link rel="stylesheet" href="css/tugas.css" />
+    <link rel="shortcut icon" href="img/facicon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>post 10</title>
+  </head>
+  <body>
+    <main class="container">
+      <section>
+        <article>
+          <div class="gambar">
+            <h2>post 10</h2>
+            <img src="https://www.mysql.com/common/logos/logo-mysql-170x115.png" alt="image" class="article-image" />
+          </div>
+          <div class="projects__content">
+            <h3 class="projects__subtitle">Pengertian DML, DDL, dan DCL Pada MySQL</h3>
+            <p style="text-indent: 0px">-28 September 2024</p>
+            <h2 class="projects__title">Definisi</h2>
+            <p class="projects__description">
+              Pengertian singkat tentang MySQL sebagai sistem manajemen basis data (DBMS) membawa pemahaman awal yang penting bagi pengguna database. MySQL, sebagai salah satu DBMS yang paling banyak digunakan di dunia, memberikan kemudahan
+              dalam pengelolaan dan manipulasi data. Dalam hal ini yaitu, pengetahuan tentang Data Manipulation Language (DML), Data Definition Language (DDL), dan Data Control Language (DCL).
+            </p>
+
+            <h3>Definisi Dasar</h3>
+            <h4>Data Manipulation Language (DML)</h4>
+            <p>
+              DML, atau Data Manipulation Language, merupakan bagian integral dari SQL yang memungkinkan pengguna untuk melakukan manipulasi data dalam suatu basis data. Salah satu perintah utama dalam DML adalah SELECT, yang memungkinkan
+              pengguna untuk mengambil data yang dibutuhkan dari tabel.
+            </p>
+            <h4>Data Definition Language (DDL)</h4>
+            <p>
+              DDL, atau Data Definition Language, berfokus pada definisi struktur basis data. Perintah-perintah dalam DDL berfungsi untuk membuat, mengubah, dan menghapus objek dalam basis data. Sebagai contoh, perintah CREATE memungkinkan
+              pengguna untuk membuat tabel baru.
+            </p>
+            <h4>Data Control Language (DCL)</h4>
+            <p>DCL, atau Data Control Language, bertanggung jawab untuk mengelola hak akses pengguna terhadap objek dalam basis data. Dua perintah utama dalam DCL adalah GRANT dan REVOKE.</p>
+
+            <h3>Data Manipulation Language (DML)</h3>
+            <p>
+              Data Manipulation Language (DML) dalam MySQL menyediakan perintah-perintah yang memungkinkan pengguna untuk memanipulasi data dalam basis data. Terdapat empat perintah utama dalam DML yang sering digunakan, yaitu SELECT,
+              INSERT, UPDATE, dan DELETE. Mari kita bahas masing-masing perintah secara rinci:
+            </p>
+
+            <h4>SELECT</h4>
+            <p>Perintah SELECT berfungsi untuk mengambil data dari satu atau lebih tabel dalam basis data. Dengan menggunakan klausa WHERE, kita dapat memfilter data yang ingin diambil. Contoh penggunaan:</p>
+            <pre><code>SELECT nama, usia FROM karyawan WHERE departemen = 'IT';</code></pre>
+            <p>Perintah ini mengambil nama dan usia dari karyawan yang bekerja di departemen IT.</p>
+
+            <h4>INSERT</h4>
+            <p>Perintah INSERT memungkinkan penambahan data baru ke dalam tabel. Pengguna dapat menentukan nilai untuk setiap kolom sesuai dengan struktur tabel. Contoh penggunaan:</p>
+            <pre><code>INSERT INTO karyawan (nama, usia, gaji) VALUES ('John Doe', 30, 6000);</code></pre>
+            <p>Perintah ini menambahkan data karyawan baru dengan nama John Doe, usia 30 tahun, dan gaji 6000 ke dalam tabel karyawan.</p>
+
+            <h4>UPDATE</h4>
+            <p>Perintah UPDATE berfungsi untuk memperbarui nilai kolom dalam satu atau lebih baris data. Kondisi WHERE dapat berfungsi untuk menentukan subset data yang akan diubah. Contoh penggunaan:</p>
+            <pre><code>UPDATE karyawan SET gaji = gaji + 500 WHERE departemen = 'IT';</code></pre>
+            <p>Perintah ini memperbarui nilai kolom gaji untuk semua karyawan di departemen IT dengan menambahkan 500 ke nilai gaji mereka.</p>
+
+            <h4>DELETE</h4>
+            <p>Perintah DELETE menghapus satu atau lebih baris data dari sebuah tabel. Seperti UPDATE, DELETE juga dapat menggunakan kondisi WHERE untuk menentukan data yang akan dihapus. Contoh penggunaan:</p>
+            <pre><code>DELETE FROM karyawan WHERE usia < 25;</code></pre>
+            <p>Perintah ini menghapus semua karyawan yang berusia di bawah 25 tahun dari tabel karyawan.</p>
+
+            <h3>Data Definition Language (DDL)</h3>
+            <p>
+              Data Definition Language (DDL) merupakan bagian dari SQL yang memungkinkan pengguna untuk mendefinisikan dan mengelola struktur basis data. DDL terdiri dari beberapa perintah utama, termasuk CREATE, ALTER, dan DROP. Mari kita
+              jelajahi masing-masing perintah untuk memahami cara mereka berkontribusi dalam mengelola struktur basis data.
+            </p>
+
+            <h4>CREATE</h4>
+            <p>Perintah CREATE berfungsi untuk membuat objek baru dalam basis data, seperti tabel, indeks, atau tampilan. Contoh penggunaan CREATE untuk membuat tabel baru yaitu:</p>
+            <pre><code>CREATE TABLE pelanggan (id INT PRIMARY KEY, nama VARCHAR(50), alamat VARCHAR(100));</code></pre>
+            <p>Perintah ini membuat tabel baru bernama ‘pelanggan’ dengan kolom id, nama, dan alamat.</p>
+
+            <h4>ALTER</h4>
+            <p>Perintah ALTER memungkinkan pengguna untuk mengubah struktur objek yang sudah ada dalam basis data. Contoh penggunaan ALTER untuk menambahkan kolom ke dalam tabel yaitu:</p>
+            <pre><code>ALTER TABLE karyawan ADD COLUMN email VARCHAR(100);</code></pre>
+            <p>Perintah ini menambahkan kolom ‘email’ ke dalam tabel ‘karyawan’.</p>
+
+            <h4>DROP</h4>
+            <p>Perintah DROP digunakan untuk menghapus objek dari basis data, seperti tabel atau indeks. Contoh penggunaan DROP untuk menghapus tabel yaitu:</p>
+            <pre><code>DROP TABLE pelanggan;</code></pre>
+            <p>Perintah ini menghapus tabel ‘pelanggan’ beserta seluruh data dan struktur yang terkait.</p>
+
+            <h3>Data Control Language (DCL)</h3>
+            <p>
+              Data Control Language (DCL) memegang peranan penting dalam pengaturan hak akses pengguna terhadap objek dalam basis data MySQL. DCL terdiri dari dua perintah utama, yaitu GRANT dan REVOKE, yang memberikan dan mencabut hak
+              akses secara berturut-turut.
+            </p>
+
+            <h4>GRANT</h4>
+            <p>
+              Perintah GRANT digunakan untuk memberikan hak akses tertentu kepada pengguna atau peran dalam basis data. Contoh penggunaan GRANT untuk memberikan hak akses SELECT pada tabel karyawan kepada pengguna1 yang terhubung dari
+              localhost yaitu:
+            </p>
+            <pre><code>GRANT SELECT ON karyawan TO 'pengguna1'@'localhost';</code></pre>
+            <p>Perintah ini memberikan hak akses SELECT pada tabel ‘karyawan’ kepada pengguna1 yang terhubung dari localhost.</p>
+
+            <h4>REVOKE</h4>
+            <p>Sebaliknya, perintah REVOKE berfungsi untuk mencabut hak akses. Contoh penggunaan REVOKE untuk mencabut hak akses SELECT dari pengguna1 yaitu:</p>
+            <pre><code>REVOKE SELECT ON karyawan FROM 'pengguna1'@'localhost';</code></pre>
+            <p>Perintah ini mencabut hak akses SELECT kepada pengguna1.</p>
+
+            <h3>Kesimpulan</h3>
+            <p>
+              Kesimpulannya kita telah menjelaskan konsep dasar dari Data Manipulation Language (DML), Data Definition Language (DDL), dan Data Control Language (DCL) pada MySQL. Selanjutnya DML memungkinkan pengguna untuk memanipulasi data
+              dengan perintah seperti SELECT, INSERT, UPDATE, dan DELETE. Kemudian DDL berfungsi untuk mengelola struktur basis data melalui perintah CREATE, ALTER, dan DROP. Sementara itu, DCL menyediakan perintah GRANT untuk memberikan
+              hak akses dan REVOKE untuk mencabutnya.
+            </p>
+          </div>
+        </article>
+        <a href="index.html" class="icon-link"><i class="fa-solid fa-backward"></i></a>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__container container grid">
+        <span class="footer__copy">
+          &#169; by <b>Kent Fahmi Prayoga</b>
+          <b>&#169; 2024</b>
+        </span>
+      </div>
+    </footer>
+  </body>
+</html>
